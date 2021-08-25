@@ -6,7 +6,7 @@ import requests
 
 app = Flask(__name__)
 client = MongoClient(host=os.environ['DB_HOST'])
-db = client.usersdb
+db = client.paymentsdb
 
 # This is only for the purpose of demo
 if db.payment.count_documents({}) == 0:
